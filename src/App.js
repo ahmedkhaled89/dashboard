@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { TooltipComponent } from '@syncfusion/ej2-react-popups';
 import { FiSettings } from 'react-icons/fi';
 
@@ -40,6 +40,35 @@ const App = () => {
             <div className='fixed md:static bg-main-bg dark:bg-main-dark-bg navbar w-full'>
               Navbar
             </div>
+          </div>
+          <div>
+            {/* Routes */}
+            <Routes>
+              {/* Dashboard */}
+              <Route path='/' element='eCommerce' />
+              <Route path='/ecommerce' element='eCommerce' />
+
+              {/* Pages */}
+              <Route path='/orders' element='Orders' />
+              <Route path='/employees' element='Employees' />
+              <Route path='/customers' element='Customers' />
+
+              {/* Apps */}
+              <Route path='/kanban' element='kanban' />
+              <Route path='/editor' element='editor' />
+              <Route path='/calender' element='calender' />
+              <Route path='/color-picker' element='color-picker' />
+
+              {/* Charts */}
+              <Route path='/line' element='line' />
+              <Route path='/area' element='area' />
+              <Route path='/bar' element='bar' />
+              <Route path='/pie' element='pie' />
+              <Route path='/financial' element='financial' />
+              <Route path='/color-mapping' element='color-mapping' />
+              <Route path='/pyramid' element='pyramid' />
+              <Route path='/stacked' element='stacked' />
+            </Routes>
           </div>
         </div>
       </BrowserRouter>
